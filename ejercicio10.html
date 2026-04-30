@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10 Sacar Promedio</title>
+    <script>
+        const resolverEjercicio10 = () => {
+            const cantidad = parseInt(prompt(`Ingrese la cantidad de números que desea ingresar:`));
+            const numeros = [];
+            let suma = 0;
+
+            for (let i = 0; i < cantidad; i++) {
+                const num = parseInt(prompt(`Ingrese el número entero ${i + 1}:`));
+                numeros.push(num);
+                suma += num;
+            }
+
+            const promedio = suma / cantidad;
+
+            document.write(`Números ingresados: ${numeros.join(', ')} <br>`);
+            document.write(`El promedio es: ${promedio}`);
+        };
+
+        resolverEjercicio10();
+    </script>
+</head>
+<body>
+</body>
+</html>
