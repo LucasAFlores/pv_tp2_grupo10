@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de Saludo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #f0f0f0;
+        }
+
+        .caja-principal {
+            background-color: white;
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 350px;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+        }
+
+        .area-mensaje {
+            height: 60px;
+            margin-top: 15px;
+        }
+
+        #texto-saludo {
+            visibility: hidden;
+            color: #333;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caja-principal">
+        <p>Introduce apellido y luego nombre:</p>
+        
+        <input type="text" id="campo-apellido" placeholder="Apellido">
+        <input type="text" id="campo-nombre" placeholder="Nombre">
+        
+        <button onclick="ejecutarSaludo()">Mostrar Saludo</button>
+
+        <div class="area-mensaje">
+            <h2 id="texto-saludo"></h2>
+        </div>
+    </div>
+
+    <script>
+        function ejecutarSaludo() {
+            let apellido = document.getElementById('campo-apellido').value;
+            let nombre = document.getElementById('campo-nombre').value;
+            const etiqueta = document.getElementById('texto-saludo');
+
+            if (apellido.trim() !== "" && nombre.trim() !== "") {
+                etiqueta.innerHTML = "¡Hola " + nombre + " " + apellido + ". Bienvenido a Programación Visual!";
+                etiqueta.style.visibility = "visible";
+            } else {
+                alert("Faltan datos");
+            }
+        }
+    </script>
+
+</body>
+</html>
