@@ -8,7 +8,7 @@
 <body>
     
     <script>
-        // 1. Declaración de la función
+        
         function calcularMayor(numero1, numero2) {
             let mensaje;
 
@@ -20,18 +20,18 @@
                 mensaje = `Ambos números son iguales (<strong>${numero1}</strong> = <strong>${numero2}</strong>).`;
             }
 
-            // Mostramos el mensaje directamente desde la función como pide el ejercicio
+           
             document.write(`<p>${mensaje}</p>`);
         }
 
-        // 2. Solicitar datos al usuario usando prompt()
+        
         let n1 = parseFloat(prompt("Ingrese el primer número:"));
         let n2 = parseFloat(prompt("Ingrese el segundo número:"));
 
-        // 3. Título y llamada a la función
-        document.write(`<h2>Resultado del Ejercicio 18:</h2>`);
+        
+        document.write(`<h2>Resultado del Ejercicio :</h2>`);
 
-        // Validamos que los datos ingresados sean números
+        
         if (!isNaN(n1) && !isNaN(n2)) {
             calcularMayor(n1, n2);
         } else {
@@ -40,4 +40,4 @@
     </script>
 
 </body>
-</html>
+</html>  
