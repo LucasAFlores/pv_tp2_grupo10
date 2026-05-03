@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+
+<script>
+
+function mostrarArreglo(arr) {
+    
+    let mensaje = "Los números ingresados son:\n";
+    
+    for (let i = 0; i < arr.length; i++) {
+       
+        mensaje +=  + arr[i] + "\n";
+    }
+    
+    
+    alert(mensaje);
+}
+
+
+let cantidad = prompt("¿Cuántos números querés ingresar?");
+
+
+let numeros = [];
+
+
+for (let i = 0; i < cantidad; i++) {
+    let num = prompt("Ingresá un número:");
+    numeros.push(num);
+}
+
+
+mostrarArreglo(numeros);
+
+</script>
+
+</body>
+</html>

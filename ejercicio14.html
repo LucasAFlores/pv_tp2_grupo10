@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Duplicar Arreglo</title>
+</head>
+<body>
+    <script>
+        // 1. Declarar la función 'duplicar'
+        function duplicar(arreglo) {
+            let nuevoArreglo = [];
+            for (let i = 0; i < arreglo.length; i++) {
+                nuevoArreglo.push(arreglo[i] * 2);
+            }
+            return nuevoArreglo;
+        }
+
+        // 2. Pedir al usuario la cantidad de números
+        let cantidad = parseInt(prompt("¿Cuántos números deseas almacenar en el arreglo?"));
+        let numerosOriginales = [];
+
+        // Validar que la cantidad ingresada sea un número válido y mayor a cero
+        if (!isNaN(cantidad) && cantidad > 0) {
+            
+            // 3. Ingresar cada número de forma iterativa
+            for (let i = 0; i < cantidad; i++) {
+                // Se utiliza parseFloat por si el usuario ingresa números decimales
+                let numeroIngresado = parseFloat(prompt(`Ingrese el número ${i + 1} de ${cantidad}:`));
+                numerosOriginales.push(numeroIngresado);
+            }
+
+            // 4. Llamar a la función y guardar el resultado
+            let numerosDuplicados = duplicar(numerosOriginales);
+
+            // 5. Mostrar los resultados usando document.write() y template strings
+            document.write(`
+                <h2>Resultado del Ejercicio 14</h2>
+                <p><strong>Cantidad de elementos:</strong> ${cantidad}</p>
+                <p><strong>Arreglo original ingresado:</strong> [${numerosOriginales.join(', ')}]</p>
+                <p><strong>Nuevo arreglo duplicado:</strong> [${numerosDuplicados.join(', ')}]</p>
+            `);
+
+        } else {
+            // Mensaje de error si la cantidad no es válida
+            document.write(`
+                <h2>Error</h2>
+                <p>Debes ingresar una cantidad válida mayor a cero. Por favor, recarga la página e intenta de nuevo.</p>
+            `);
+        }
+    </script>
+</body>
+</html>

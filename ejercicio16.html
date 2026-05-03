@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 - Sumar Rango</title>
+</head>
+<body>
+    
+    <script>
+        // 1. Declaración de la función
+        function sumarRango(inicial, final) {
+            // Verificamos la condición del enunciado
+            if (inicial > final) {
+                return "Error: El número inicial debe ser menor o igual que el número final.";
+            }
+
+            let suma = 0;
+            // Recorremos desde el número inicial hasta el final (incluyéndolo)
+            for (let i = inicial; i <= final; i++) {
+                suma += i;
+            }
+            
+            return suma;
+        }
+
+        // 2. Solicitar datos al usuario usando prompt()
+        let entradaInicial = prompt("Ingrese el número inicial (debe ser menor o igual al final):");
+        let numeroInicial = parseInt(entradaInicial);
+
+        let entradaFinal = prompt("Ingrese el número final:");
+        let numeroFinal = parseInt(entradaFinal);
+
+        // 3. Mostrar el resultado usando document.write() y template strings
+        document.write(`<h2>Resultado del Ejercicio 16:</h2>`);
+
+        // Verificamos que el usuario haya ingresado números válidos antes de llamar a la función
+        if (!isNaN(numeroInicial) && !isNaN(numeroFinal)) {
+            let resultado = sumarRango(numeroInicial, numeroFinal);
+            
+            // Si el resultado es un número, mostramos la suma. Si es texto, mostramos el error.
+            if (typeof resultado === "number") {
+                document.write(`<p>La suma de los números en el rango de <strong>${numeroInicial}</strong> a <strong>${numeroFinal}</strong> es: <strong>${resultado}</strong>.</p>`);
+            } else {
+                document.write(`<p><strong>${resultado}</strong></p>`);
+            }
+        } else {
+            document.write(`<p>Por favor, recargue la página e ingrese valores numéricos válidos.</p>`);
+        }
+    </script>
+
+</body>
+</html>
