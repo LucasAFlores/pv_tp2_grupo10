@@ -8,15 +8,15 @@
 <body>
     
     <script>
-       
+        
         function sumarRango(inicial, final) {
-            
+           
             if (inicial > final) {
                 return "Error: El número inicial debe ser menor o igual que el número final.";
             }
 
             let suma = 0;
-            
+           
             for (let i = inicial; i <= final; i++) {
                 suma += i;
             }
@@ -24,20 +24,21 @@
             return suma;
         }
 
-        // 2. Solicitar datos al usuario usando prompt() let entradaInicial = prompt("Ingrese el número inicial (debe ser menor o igual al final):");
+       
+        let entradaInicial = prompt("Ingrese el número inicial (debe ser menor o igual al final):");
         let numeroInicial = parseInt(entradaInicial);
 
         let entradaFinal = prompt("Ingrese el número final:");
         let numeroFinal = parseInt(entradaFinal);
 
-        // 3. Mostrar el resultado usando document.write() y template strings
-        document.write(`<h2>Resultado del Ejercicio 16:</h2>`);
+        
+        document.write(`<h2>Resultado del Ejercicio :</h2>`);
 
-        // Verificamos que el usuario haya ingresado números válidos antes de llamar a la función
+        
         if (!isNaN(numeroInicial) && !isNaN(numeroFinal)) {
             let resultado = sumarRango(numeroInicial, numeroFinal);
             
-            // Si el resultado es un número, mostramos la suma. Si es texto, mostramos el error.
+            
             if (typeof resultado === "number") {
                 document.write(`<p>La suma de los números en el rango de <strong>${numeroInicial}</strong> a <strong>${numeroFinal}</strong> es: <strong>${resultado}</strong>.</p>`);
             } else {
