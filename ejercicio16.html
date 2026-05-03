@@ -8,15 +8,15 @@
 <body>
     
     <script>
-        // 1. Declaración de la función
+       
         function sumarRango(inicial, final) {
-            // Verificamos la condición del enunciado
+            
             if (inicial > final) {
                 return "Error: El número inicial debe ser menor o igual que el número final.";
             }
 
             let suma = 0;
-            // Recorremos desde el número inicial hasta el final (incluyéndolo)
+            
             for (let i = inicial; i <= final; i++) {
                 suma += i;
             }
@@ -24,8 +24,7 @@
             return suma;
         }
 
-        // 2. Solicitar datos al usuario usando prompt()
-        let entradaInicial = prompt("Ingrese el número inicial (debe ser menor o igual al final):");
+        // 2. Solicitar datos al usuario usando prompt() let entradaInicial = prompt("Ingrese el número inicial (debe ser menor o igual al final):");
         let numeroInicial = parseInt(entradaInicial);
 
         let entradaFinal = prompt("Ingrese el número final:");

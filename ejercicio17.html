@@ -8,31 +8,31 @@
 <body>
     
     <script>
-        // 1. Declaración de la función
+      
         function contarLetraA(texto) {
             let contador = 0;
             
-            // Convertimos todo el texto a minúsculas para no omitir las 'A' mayúsculas
+            
             let textoNormalizado = texto.toLowerCase();
 
-            // Recorremos cada letra del texto
+            
             for (let i = 0; i < textoNormalizado.length; i++) {
-                // Verificamos si el carácter actual es 'a' o 'á' (con tilde)
+                
                 if (textoNormalizado[i] === 'a' || textoNormalizado[i] === 'á') {
-                    contador++; // Sumamos 1 al contador
+                    contador++; 
                 }
             }
             
             return contador;
         }
 
-        // 2. Solicitar el string al usuario usando prompt()
+        
         let fraseIngresada = prompt("Ingrese una palabra o frase para contar sus letras 'a':");
 
-        // 3. Mostrar el resultado usando document.write() y template strings
+        
         document.write(`<h2>Resultado del Ejercicio 17:</h2>`);
 
-        // Verificamos que el usuario haya escrito algo y no haya cancelado el prompt
+        
         if (fraseIngresada !== null && fraseIngresada.trim() !== "") {
             let resultado = contarLetraA(fraseIngresada);
             

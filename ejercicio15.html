@@ -8,34 +8,34 @@
 <body>
     
     <script>
-        // 1. Declaración de la función
+       
         function retornarMes(numero) {
-            // Arreglo con los nombres de los meses
+         
             const meses = [
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
             ];
 
-            // Verificamos si el número está en el rango de 1 a 12
+            
             if (numero >= 1 && numero <= 12) {
-                // Restamos 1 porque los índices de los arreglos empiezan en 0
+               
                 return meses[numero - 1]; 
             } else {
                 return "No es un mes válido.";
             }
         }
 
-        // 2. Solicitar datos al usuario usando prompt()
+      
         let entrada = prompt("Ingrese un número entero del 1 al 12:");
         let numeroEntero = parseInt(entrada);
 
-        // 3. Llamar a la función y guardar lo que devuelve
+       
         let resultado = retornarMes(numeroEntero);
 
-        // 4. Mostrar el resultado usando document.write() y template strings
+       
         document.write(`<h2>Resultado del Ejercicio 14:</h2>`);
         
-        // Verificamos si la entrada fue un número válido para darle un mejor formato al mensaje
+        
         if (numeroEntero >= 1 && numeroEntero <= 12) {
             document.write(`<p>El número <strong>${numeroEntero}</strong> corresponde al mes de: <strong>${resultado}</strong>.</p>`);
         } else {
