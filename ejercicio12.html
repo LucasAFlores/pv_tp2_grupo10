@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>Ejercicio 12:Numero Par o Impar</title>
     <script>
+
+        const esPar = (num) => {
+            return num % 2 === 0;
+        };
+
         const resolverEjercicio12 = () => {
             const numero = parseInt(prompt(`Ingrese un número:`));
 
-            if (numero % 2 === 0) {
+           if (esPar(numero)) {
                 document.write(`El número ${numero} es par.`);
             } else {
                 document.write(`El número ${numero} es impar.`);
             }
         };
-
+        
         resolverEjercicio12();
     </script>
 </head>
