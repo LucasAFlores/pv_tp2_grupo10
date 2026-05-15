@@ -2,9 +2,11 @@
 import { mostrarSeleccion } from './serviceEjercicio24.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById('formulario');
-    const res = document.getElementById('resultado');
+    
+    const form = document.querySelector('#formulario');
+    const res = document.querySelector('#resultado');
 
+    
     form.addEventListener('change', (e) => {
         const seleccion = e.target.value;
         
@@ -14,9 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const componente = mostrarSeleccion(seleccion);
         
-        
         res.appendChild(componente);
-        
-        console.log("Seleccionado:", seleccion);
     });
 });
