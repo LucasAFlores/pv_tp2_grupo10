@@ -1,3 +1,4 @@
+
 export const mostrarSeleccion = (valor) => {
     const div = document.createElement('div');
     div.className = 'info-box';
