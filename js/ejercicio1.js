@@ -1,2 +1,2 @@
-const alumno= ["MAURO", "LUCAS","GABRIEL","FEDERICO","BRIAN"];
-console.log(`somos ${alumno} y estamos aprendiendo javascript`);
+const integrantes= ["MAURO", "LUCAS","GABRIEL","FEDERICO","BRIAN"];
+console.log(`somos ${integrantes} y estamos aprendiendo javascript`);
