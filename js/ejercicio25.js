@@ -1,4 +1,4 @@
-import { obtenerColorAleatorio } from './serviceEjercicio25.js';
+import { obtenerColorAleatorio } from './funciones25.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     

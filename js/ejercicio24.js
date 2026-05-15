@@ -1,5 +1,5 @@
 
-import { mostrarSeleccion } from './serviceEjercicio24.js';
+import { mostrarSeleccion } from './funciones24.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     
